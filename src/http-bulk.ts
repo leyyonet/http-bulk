@@ -10,7 +10,7 @@ import {
 import {httpMock} from "@leyyo/http-mock";
 
 // noinspection JSUnusedGlobalSymbols
-export class BulkRunner {
+class HttpBulk {
 
     private async _runOne(service: MockServiceRequest, router: Router, req: Request, res: Response, custom?: RecLike): Promise<MockServicePreparedResponse> {
         return new Promise((resolve: MockResponseResolve, reject: MockResponseReject) => {
@@ -80,3 +80,4 @@ export class BulkRunner {
         return result;
     }
 }
+export const httpBulk = new HttpBulk();
